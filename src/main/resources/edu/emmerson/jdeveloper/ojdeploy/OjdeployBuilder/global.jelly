@@ -1,0 +1,54 @@
+<j:jelly 
+	xmlns:j="jelly:core" 
+	xmlns:st="jelly:stapler" 
+	xmlns:d="jelly:define" 
+	xmlns:l="/lib/layout" 
+	xmlns:t="/lib/hudson" 
+	xmlns:f="/lib/form">
+  <!--
+    This Jelly script is used to produce the global configuration option.
+
+    Jenkins uses a set of tag libraries to provide uniformity in forms.
+    To determine where this tag is defined, first check the namespace URI,
+    and then look under $JENKINS/views/. For example, <f:section> is defined
+    in $JENKINS/views/lib/form/section.jelly.
+
+    It's also often useful to just check other similar scripts to see what
+    tags they use. Views are always organized according to its owner class,
+    so it should be straightforward to find them.
+  -->
+ 
+ 
+
+  
+  <!-- http://adfhowto.blogspot.com.es/2011/03/ojdeploy-deploying-adf-application-from.html 
+  <f:entry title="" field="" description=""/>
+  -->
+  
+    <f:section title="JDeveloper ojdeploy" name="ojdeployconfig">
+		<f:entry title="Registry of compilers">
+      		<f:repeatable var="instance" field="ojdeploylist" add="Add ojdeploy">
+				
+				<table width="100%">
+					<f:entry title="Disabled" field="disabled" description="Disabled the use.">
+        				<f:checkbox />
+    				</f:entry>
+					<f:entry title="Alias" field="name" description="Alias for ojdeploy">
+						<f:textbox/>
+					</f:entry>
+					<f:entry title="Fullpath" field="value" description="Location on disk of file [ojdeploy|ojdeploy.exe]">
+						<f:textbox/>
+					</f:entry>
+					<f:entry title="">
+						<div align="right">
+							<f:repeatableDeleteButton value="Delete ojdeploy"/>
+						</div>
+					</f:entry>
+				</table>
+				
+			</f:repeatable>
+		</f:entry>
+  </f:section>
+  
+   
+</j:jelly>

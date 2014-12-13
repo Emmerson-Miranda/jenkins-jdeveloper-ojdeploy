@@ -1,0 +1,90 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This jelly script is used for per-project configuration.
+
+    See global.jelly for a general discussion about jelly script.
+  -->
+
+  <!--
+    Creates a text field that shows the value of the "name" property.
+    When submitted, it will be passed to the corresponding constructor parameter.
+  -->
+  <f:section title="General">
+    <f:entry field="path_ojdeploy" title="Choose ojdeploy">
+   		<f:select />
+	</f:entry>
+  </f:section>
+  
+  
+  <f:section title="Arguments">
+    <f:entry title="* basedir" field="opt_basedir" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="* workspace" field="arg_workspace" description="Full path to the JDeveloper workspace file (.jws)">
+    	<f:textbox />
+  	</f:entry>
+  	 
+    <f:entry title="List of projects" description="List of projects in workspace to compile.">
+    	<f:repeatable field="arg_projects" add="Add project">
+			
+				<table width="100%"  style="border-style: solid;border-color: LIGHTGRAY #FFFFFF GRAY #FFFFFF;border-width:1px;">
+					<f:entry title="Disabled compilation" field="disabled" description="Disabled the compilation of this project.">
+        				<f:checkbox />
+    				</f:entry>
+					<f:entry title="Project" field="name" description="Name of the JDeveloper project within the .jws where the deployment profile can be found. If omitted, the Profile is assumed to be in the workspace.">
+						<f:textbox/>
+					</f:entry>
+					<f:entry title="Deployment Profile" field="value" description="Name of the deployment profile in the project/workspace.">
+						<f:textbox/>
+					</f:entry>
+					<f:entry title="">
+						<div align="right">
+							<f:repeatableDeleteButton value="Delete project"/>
+						</div>
+					</f:entry>
+				</table>
+		</f:repeatable>
+	</f:entry>
+
+    
+    
+  	<!--
+    <f:entry title="buildfileschema" field="arg_buildfileschema" description="Print XML Schema for the build file. ">
+    	<f:textbox />
+  	</f:entry>
+  	-->
+  </f:section>
+
+  <!--
+  <f:section title="Options">
+
+  	<f:entry title="outputfile"     field="opt_outputfile" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="nocompile"      field="opt_nocompile" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="clean"          field="opt_clean" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="nodatasources"  field="opt_nodatasources" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="forcerewrite"   field="opt_forcerewrite" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="updatewebxmlejbrefs" field="opt_updatewebxmlejbrefs" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="define"         field="opt_define" description="">
+    	<f:textbox />
+  	</f:entry>
+  	<f:entry title="statuslogfile"  field="opt_statuslogfile" description="">
+    	<f:textbox />
+  	</f:entry>
+  	
+  </f:section>
+  -->
+
+  
+</j:jelly>

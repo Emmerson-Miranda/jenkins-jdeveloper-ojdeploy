@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.jenkins-ci.plugins</groupId>
+		<artifactId>plugin</artifactId>
+		<version>1.532.3</version>
+		<!-- which version of Jenkins is this plugin built against? -->
+	</parent>
+
+	<groupId>edu.emmerson.jdeveloper</groupId>
+	<artifactId>ojdeploy</artifactId>
+	<version>2.0</version>
+	<packaging>hpi</packaging>
+
+	<name>JDeveloper ojdeploy plugin</name>
+	<url>https://github.com/Emmerson-Miranda/jenkins-jdeveloper-ojdeploy</url>
+	<description>This plugin is an extension to build ADF applications with ojdeploy utility. With this extension you don't need Ant/Maven scripts to build your ADF projects in jenkins.</description>
+
+	<developers>
+		<developer>
+			<id>Emmerson-Miranda</id>
+			<name>Emmerson Miranda</name>
+			<email>emmerson.miranda@gmail.com</email>
+			<url>http://www.emmersonmiranda.net</url>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>GNU LGPL V3.0</name>
+			<url>https://www.gnu.org/licenses/lgpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+
+	<!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
+	<repositories>
+		<repository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+</project>
