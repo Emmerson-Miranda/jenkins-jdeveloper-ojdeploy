@@ -1,4 +1,4 @@
-package edu.emmerson.jdeveloper.ojdeploy;
+package org.jenkinsci.plugins.jdeveloper.ojdeploy;
 
 import hudson.Extension;
 import hudson.Launcher;
@@ -25,12 +25,11 @@ import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 
 import org.apache.commons.lang.StringUtils;
+import org.jenkinsci.plugins.jdeveloper.ojdeploy.exec.OjdeployExec;
+import org.jenkinsci.plugins.jdeveloper.ojdeploy.validator.ProfileValidation;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 import org.kohsuke.stapler.StaplerRequest;
-
-import edu.emmerson.jdeveloper.ojdeploy.exec.OjdeployExec;
-import edu.emmerson.jdeveloper.ojdeploy.validator.ProfileValidation;
 
 /**
  *

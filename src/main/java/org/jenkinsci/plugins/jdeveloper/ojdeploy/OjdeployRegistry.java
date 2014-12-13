@@ -1,4 +1,4 @@
-package edu.emmerson.jdeveloper.ojdeploy;
+package org.jenkinsci.plugins.jdeveloper.ojdeploy;
 
 import java.io.Serializable;
 

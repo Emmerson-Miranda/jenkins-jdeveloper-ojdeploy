@@ -1,4 +1,4 @@
-package edu.emmerson.jdeveloper.ojdeploy.validator;
+package org.jenkinsci.plugins.jdeveloper.ojdeploy.validator;
 
 import java.io.File;
 

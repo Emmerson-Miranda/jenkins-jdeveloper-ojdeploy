@@ -1,4 +1,4 @@
-package edu.emmerson.jdeveloper.ojdeploy.exec;
+package org.jenkinsci.plugins.jdeveloper.ojdeploy.exec;
 
 import java.io.BufferedReader;
 import java.io.IOException;
