@@ -9,9 +9,12 @@ Let's use multiple versions of JDeveloper Ojdeploy utility (jenkins->configurati
 
 Easy job configuration, just read ojdeploy command line documentation.
 
-Installation
-===========================
+Installation with command line
+==============================
 git clone https://github.com/Emmerson-Miranda/jenkins-jdeveloper-ojdeploy.git
+
 cd jenkins-jdeveloper-ojdeploy
+
 mvn clean package
+
 take the target\ojdeploy.hpi generated file and install it into jenkins.
